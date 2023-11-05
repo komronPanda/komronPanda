@@ -2,8 +2,8 @@ import '/features/details/data/models/information_model.dart';
 import '/features/details/domain/entities/information_entity.dart';
 
 class InformationMapper {
-  static InformationEntity map(InformationModel information)
-  => InformationEntity(
+  static InformationEntity map(InformationModel information) =>
+      InformationEntity(
         basePrice: information.basePrice,
         qBasePrice: information.qBasePrice,
         bedroom: information.bedroom,
@@ -26,6 +26,6 @@ class InformationMapper {
         pets: information.pets,
         number_of_bedrooms: information.number_of_bedrooms,
         number_of_bathrooms: information.number_of_bathrooms,
-      extra_services: information.extra_services,
+        extra_services: information.extra_services,
       );
 }

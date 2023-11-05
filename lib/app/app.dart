@@ -1,3 +1,4 @@
+import 'package:details_page_clean_arch/features/add_card/presentation/bloc/add_card_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../features/details/presentation/bloc/information_bloc.dart';
@@ -10,8 +11,13 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appRouter = ls<AppRouter>();
-    return BlocProvider(
-      create: (context) => ls<InformationBloc>()..add(const InformationEvent.getInformation()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<InformationBloc>(
+            create: (context) => ls<InformationBloc>()
+              ..add(const InformationEvent.getInformation())),
+        BlocProvider<AddCardBloc>(create: (context) => ls<AddCardBloc>()),
+      ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routeInformationParser: appRouter.defaultRouteParser(),

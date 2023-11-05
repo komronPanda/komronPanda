@@ -14,5 +14,10 @@ class AppRouter extends $AppRouter {
       page: InformationRoute.page,
       path: Routes.InformationPage,
     ),
+    AutoRoute(
+      initial: true,
+      page: AddCardRoute.page,
+      path: Routes.AddCardPage,
+    ),
   ];
 }

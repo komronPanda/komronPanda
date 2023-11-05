@@ -24,14 +24,20 @@ class $LibGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/camera_icon.svg
+  SvgGenImage get cameraIcon => const SvgGenImage('assets/icons/camera_icon.svg');
+
+  /// File path: assets/icons/card_icon.svg
+  SvgGenImage get cardIcon => const SvgGenImage('assets/icons/card_icon.svg');
+
+  /// File path: assets/icons/down_icon.svg
+  SvgGenImage get downIcon => const SvgGenImage('assets/icons/down_icon.svg');
+
   /// File path: assets/icons/leftback_icon.svg
   SvgGenImage get leftbackIcon => const SvgGenImage('assets/icons/leftback_icon.svg');
 
-  /// File path: assets/icons/logo_icon.png
-  AssetGenImage get logoIconPng => const AssetGenImage('assets/icons/logo_icon.png');
-
-  /// File path: assets/icons/logo_icon.svg
-  SvgGenImage get logoIconSvg => const SvgGenImage('assets/icons/logo_icon.svg');
+  /// File path: assets/icons/logo_image.jpg
+  AssetGenImage get logoImage => const AssetGenImage('assets/icons/logo_image.jpg');
 
   /// File path: assets/icons/order_type_icon.svg
   SvgGenImage get orderTypeIcon => const SvgGenImage('assets/icons/order_type_icon.svg');
@@ -40,7 +46,7 @@ class $AssetsIconsGen {
   SvgGenImage get status => const SvgGenImage('assets/icons/status.svg');
 
   /// List of all assets
-  List<dynamic> get values => [leftbackIcon, logoIconPng, logoIconSvg, orderTypeIcon, status];
+  List<dynamic> get values => [cameraIcon, cardIcon, downIcon, leftbackIcon, logoImage, orderTypeIcon, status];
 }
 
 class Assets {
